@@ -35,11 +35,4 @@ A modular computational simulation and control framework for an autonomous quadr
 - [ ] **Phase 5:** Sensor modeling and Error-State Kalman Filter (ESKF)
 - [ ] **Phase 6:** 3D visualization, benchmarking, and telemetry logging
 
----
 
-## Getting Started
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/MrPandatje/quadrotor-gnc-sim.git](https://github.com/MrPandatje/quadrotor-gnc-sim.git)
-   cd quadrotor-gnc-sim
