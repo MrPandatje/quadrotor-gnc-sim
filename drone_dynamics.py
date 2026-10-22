@@ -51,11 +51,11 @@ class QuadrotorDynamics:
         # Afstand van as tot motor is L * sin(45) = L * (sqrt(2)/2)
         l = L * (np.sqrt(2) / 2)
 
-        # Allocation Matrix
-        # M1 (Rechts-Voor, CW), M2 (Links-Achter, CW), M3 (Links-Voor, CCW), M4 (Rechts-Achter, CCW)
-        tau_x = kf * l * (-w_sq[0] - w_sq[1] + w_sq[2] + w_sq[3])  # Roll (draaien om X)
-        tau_y = kf * l * (-w_sq[0] + w_sq[1] + w_sq[2] - w_sq[3])  # Pitch (draaien om Y)
-        tau_z = km * (-w_sq[0] - w_sq[1] + w_sq[2] + w_sq[3])  # Yaw (draaien om Z, gebaseerd op motor draairichting)
+        # Fysiek correcte Allocation (r x F) in ENU frame
+        # M1(Rechtsvoor, CW), M2(Linksachter, CW), M3(Linksvoor, CCW), M4(Rechtsachter, CCW)
+        tau_x = kf * l * (w_sq[0] - w_sq[1] + w_sq[2] - w_sq[3])  # Rotatie om X-as
+        tau_y = kf * l * (-w_sq[0] + w_sq[1] + w_sq[2] - w_sq[3])  # Rotatie om Y-as
+        tau_z = km * (w_sq[0] + w_sq[1] - w_sq[2] - w_sq[3])  # Rotatie om Z-as (Yaw)
 
         return T, np.array([tau_x, tau_y, tau_z])
 
