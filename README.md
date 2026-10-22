@@ -28,7 +28,7 @@ A modular computational simulation and control framework for an autonomous quadr
 ## Roadmap
 
 - [x] Repository setup and initial configuration
-- [ ] **Phase 1:** 6-DOF physical dynamics, quaternion kinematics, and RK4 verification
+- [x] **Phase 1:** 6-DOF physical dynamics, quaternion kinematics, and RK4 verification
 - [ ] **Phase 2:** 3D minimum-snap trajectory generation
 - [ ] **Phase 3:** Cascaded baseline geometric controller
 - [ ] **Phase 4:** Nonlinear Model Predictive Control (NMPC) with CasADi
