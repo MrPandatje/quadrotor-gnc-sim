@@ -29,10 +29,22 @@ A modular computational simulation and control framework for an autonomous quadr
 
 - [x] Repository setup and initial configuration
 - [x] **Phase 1:** 6-DOF physical dynamics, quaternion kinematics, and RK4 verification
-- [ ] **Phase 2:** 3D minimum-snap trajectory generation
-- [ ] **Phase 3:** Cascaded baseline geometric controller
-- [ ] **Phase 4:** Nonlinear Model Predictive Control (NMPC) with CasADi
+- [x] **Phase 2:** 3D minimum-snap trajectory generation
+- [x] **Phase 3:** Cascaded baseline geometric controller
+- [x] **Phase 4:** Nonlinear Model Predictive Control (NMPC) with CasADi
 - [ ] **Phase 5:** Sensor modeling and Error-State Kalman Filter (ESKF)
 - [ ] **Phase 6:** 3D visualization, benchmarking, and telemetry logging
 
+---
 
+## Intermediary Results
+
+### Nonlinear Model Predictive Control (NMPC) Point-to-Point Flight
+
+<p align="center">
+  <img src="Results/fase4.png" alt="NMPC 3D Trajectcontrole" width="750"/>
+</p>
+
+- **Scenario:** Autonome 3D point-to-point vlucht van de startpositie $[0, 0, 0]$ naar het doelpunt $[2, 3, 5]\,\text{m}$.
+- **Controller:** NMPC geformuleerd in CasADi met de IPOPT solver, rekening houdend met 6-DOF rotatie- en translatiedynamica.
+- **Observatie:** De quadrotor convergeert stabiel naar het setpoint met een gecontroleerde nadering en minimale overshoot op hoogte ($Z$).
